@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  citiesEndpoint: 'http://localhost:1111/cities/queryByPage'
 };
