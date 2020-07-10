@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CitiesService should fetch pets data 1`] = `
+Object {
+  "content": Array [
+    Object {
+      "id": 317,
+      "name": "Ahvaz",
+    },
+    Object {
+      "id": 87,
+      "name": "Al-Jizah",
+    },
+    Object {
+      "id": 147,
+      "name": "Al-Khartum Bahri",
+    },
+    Object {
+      "id": 227,
+      "name": "Al-Madinah",
+    },
+    Object {
+      "id": 103,
+      "name": "Aleppo",
+    },
+    Object {
+      "id": 47,
+      "name": "Alexandria",
+    },
+    Object {
+      "id": 176,
+      "name": "Algiers",
+    },
+    Object {
+      "id": 307,
+      "name": "Allahabad",
+    },
+    Object {
+      "id": 302,
+      "name": "Almaty",
+    },
+    Object {
+      "id": 260,
+      "name": "Amman",
+    },
+  ],
+  "empty": false,
+  "first": false,
+  "last": false,
+  "number": 1,
+  "numberOfElements": 10,
+  "pageable": Object {
+    "offset": 10,
+    "pageNumber": 1,
+    "pageSize": 10,
+    "paged": true,
+    "sort": Object {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true,
+    },
+    "unpaged": false,
+  },
+  "size": 10,
+  "sort": Object {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true,
+  },
+  "totalElements": 332,
+  "totalPages": 34,
+}
+`;
