@@ -2,10 +2,11 @@
 
 exports[`CitiesContainerComponent should match snapshot 1`] = `
 <app-cities
+  cities$={[Function Store]}
   store={[Function MockStore]}
 >
   <h1>
     Cities
-  </h1>
+  </h1><app-cities-table />
 </app-cities>
 `;
