@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cities Selectors getCities should select cities 1`] = `
+Array [
+  Object {
+    "id": 317,
+    "name": "Ahvaz",
+  },
+  Object {
+    "id": 87,
+    "name": "Al-Jizah",
+  },
+  Object {
+    "id": 147,
+    "name": "Al-Khartum Bahri",
+  },
+  Object {
+    "id": 227,
+    "name": "Al-Madinah",
+  },
+  Object {
+    "id": 103,
+    "name": "Aleppo",
+  },
+  Object {
+    "id": 47,
+    "name": "Alexandria",
+  },
+  Object {
+    "id": 176,
+    "name": "Algiers",
+  },
+  Object {
+    "id": 307,
+    "name": "Allahabad",
+  },
+  Object {
+    "id": 302,
+    "name": "Almaty",
+  },
+  Object {
+    "id": 260,
+    "name": "Amman",
+  },
+]
+`;
