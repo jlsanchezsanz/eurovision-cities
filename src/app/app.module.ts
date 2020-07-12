@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { reducers, metaReducers } from './state/reducers';
 import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { CitiesEffects } from './cities.effects';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +23,7 @@ import { environment } from '../environments/environment';
       },
     }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forFeature([CitiesEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent],
