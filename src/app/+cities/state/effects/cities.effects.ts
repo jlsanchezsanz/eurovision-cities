@@ -4,8 +4,8 @@ import { of } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
 
 import { fetchCities, fetchCitiesSuccess, fetchCitiesError } from '../actions';
-import { CitiesService } from '../../services';
-import { CitiesResponse } from '../../models';
+import { CitiesService } from '../../../services';
+import { CitiesResponse } from '../../../models';
 
 @Injectable()
 export class CitiesEffects {

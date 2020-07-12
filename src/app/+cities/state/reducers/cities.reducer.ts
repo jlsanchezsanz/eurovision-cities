@@ -1,6 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
 
-import { City } from '../../models';
+import { City } from '../../../models';
 import { fetchCities, fetchCitiesSuccess, fetchCitiesError } from '../actions';
 
 export const citiesFeatureKey = 'cities';

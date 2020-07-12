@@ -4,7 +4,7 @@ import {
   fetchCitiesSuccess,
   fetchCitiesError,
 } from '../../actions';
-import { citiesResponseMock } from '../../../mocks';
+import { citiesResponseMock } from '../../../../mocks';
 
 describe('Cities Reducer', () => {
   describe('an unknown action', () => {

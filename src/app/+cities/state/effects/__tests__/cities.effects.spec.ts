@@ -2,13 +2,13 @@ import { marbles } from 'rxjs-marbles';
 import { of, throwError } from 'rxjs';
 
 import { CitiesEffects } from '../cities.effects';
-import { ActionsMock } from '../../../../jest-mocks';
+import { ActionsMock } from '../../../../../jest-mocks';
 import {
   fetchCities,
   fetchCitiesSuccess,
   fetchCitiesError,
 } from '../../actions';
-import { citiesResponseMock } from '../../../mocks';
+import { citiesResponseMock } from '../../../../mocks';
 
 describe('CitiesEffects', () => {
   let actions$: ActionsMock<any>;

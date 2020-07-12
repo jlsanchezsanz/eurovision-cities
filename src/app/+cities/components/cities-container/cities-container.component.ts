@@ -2,11 +2,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-cities',
-  templateUrl: './cities.component.html',
-  styleUrls: ['./cities.component.scss'],
+  templateUrl: './cities-container.component.html',
+  styleUrls: ['./cities-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CitiesComponent implements OnInit {
+export class CitiesContainerComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}

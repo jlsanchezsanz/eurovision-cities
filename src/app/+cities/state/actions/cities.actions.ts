@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-import { City } from '../../models';
+import { City } from '../../../models';
 
 export const fetchCities = createAction('[Cities] Fetch');
 

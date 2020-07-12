@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CitiesComponent } from './cities.component';
+import { CitiesContainerComponent } from './components';
 
 const routes: Routes = [
   {
     path: '',
-    component: CitiesComponent,
+    component: CitiesContainerComponent,
   },
 ];
 
