@@ -1,4 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Store } from '@ngrx/store';
+
+import { State } from '../../../state/reducers/index';
+import { fetchCities } from '../../state/actions';
 
 @Component({
   selector: 'app-cities',
@@ -7,7 +11,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CitiesContainerComponent implements OnInit {
-  constructor() {}
+  constructor(private store: Store<State>) {}
 
-  ngOnInit() {}
+  public ngOnInit(): void {
+    this.store.dispatch(fetchCities());
+  }
 }

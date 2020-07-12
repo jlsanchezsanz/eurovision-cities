@@ -5,13 +5,13 @@ import { fetchCities, fetchCitiesSuccess, fetchCitiesError } from '../actions';
 
 export const citiesFeatureKey = 'cities';
 
-export interface State {
+export interface CitiesState {
   cities: City[];
   loading: boolean;
   error?: any;
 }
 
-export const initialState: State = {
+export const initialState: CitiesState = {
   cities: [],
   loading: false
 };
@@ -31,6 +31,6 @@ const _citiesReducer = createReducer(
   }))
 );
 
-export function citiesReducer(state: State, action: Action) {
+export function citiesReducer(state: CitiesState, action: Action) {
   return _citiesReducer(state, action);
 }

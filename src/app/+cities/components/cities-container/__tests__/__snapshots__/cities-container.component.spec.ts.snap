@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CitiesContainerComponent should match snapshot 1`] = `
+<app-cities
+  store={[Function MockStore]}
+>
+  <h1>
+    Cities
+  </h1>
+</app-cities>
+`;
