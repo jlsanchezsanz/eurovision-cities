@@ -1,23 +1,22 @@
-import { createSelector } from '@ngrx/store';
+import { createSelector, createFeatureSelector } from '@ngrx/store';
 
-import { getCitiesState } from './cities.selectors';
+import { paginationFeatureKey, PaginationState } from '../reducers';
 
-const getPagination = createSelector(
-  getCitiesState,
-  ({ pagination }) => pagination
+export const getPaginationState = createFeatureSelector<PaginationState>(
+  paginationFeatureKey
 );
 
 export const getPageNumber = createSelector(
-  getPagination,
+  getPaginationState,
   (pagination) => pagination && pagination.pageNumber
 );
 
 export const getPageSize = createSelector(
-  getPagination,
+  getPaginationState,
   (pagination) => pagination && pagination.size
 );
 
 export const getTotalElements = createSelector(
-  getPagination,
+  getPaginationState,
   (pagination) => pagination && pagination.totalElements
 );

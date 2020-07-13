@@ -9,13 +9,13 @@ import {
   CitiesTableComponent,
 } from './components';
 import { CitiesRoutingModule } from './cities-routing.module';
-import { CitiesEffects } from './state/effects';
+import { CitiesEffects, PaginationEffects } from './state/effects';
 
 @NgModule({
   imports: [
     CommonModule,
     CitiesRoutingModule,
-    EffectsModule.forFeature([CitiesEffects]),
+    EffectsModule.forFeature([CitiesEffects, PaginationEffects]),
     MatPaginatorModule,
     MatTableModule,
   ],

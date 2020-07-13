@@ -1,20 +1,21 @@
-import {
-  ActionReducer,
-  ActionReducerMap,
-  createFeatureSelector,
-  createSelector,
-  MetaReducer,
-} from '@ngrx/store';
+import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 
 import { environment } from '../../../environments/environment';
-import { citiesReducer } from '../../+cities/state/reducers';
+import {
+  citiesReducer,
+  CitiesState,
+  paginationReducer,
+  PaginationState,
+} from '../../+cities/state/reducers';
 
 export interface State {
-  cities: any;
+  cities: CitiesState;
+  pagination: PaginationState;
 }
 
 export const reducers: ActionReducerMap<State> = {
-  cities: citiesReducer
+  cities: citiesReducer,
+  pagination: paginationReducer,
 };
 
 export const metaReducers: MetaReducer<State>[] = !environment.production

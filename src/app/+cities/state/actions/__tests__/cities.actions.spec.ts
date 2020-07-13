@@ -1,6 +1,6 @@
 import * as fromFetchCities from '../cities.actions';
 
-import { citiesResponseMock } from 'src/app/mocks';
+import { citiesResponseMock } from '../../../../mocks';
 
 describe('Fetch cities', () => {
   it('should return fetch action', () => {

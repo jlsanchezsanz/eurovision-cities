@@ -27,12 +27,7 @@ describe('Cities Reducer', () => {
   });
 
   it('should update loading, cities and pagination on fetch success', () => {
-    const {
-      content,
-      pageable: { pageNumber },
-      size,
-      totalElements,
-    } = citiesResponseMock;
+    const { content } = citiesResponseMock;
     const result = citiesReducer(
       initialState,
       fetchCitiesSuccess({ citiesResponse: citiesResponseMock })
@@ -40,11 +35,6 @@ describe('Cities Reducer', () => {
     expect(result).toEqual({
       ...initialState,
       loading: false,
-      pagination: {
-        pageNumber,
-        size,
-        totalElements,
-      },
       cities: content,
     });
   });
