@@ -33,7 +33,7 @@ describe('CitiesEffects', () => {
         actions$.setSource(m.cold('a', { a: fetchCities() }));
 
         const expected = m.cold('a', {
-          a: fetchCitiesSuccess({ cities: citiesResponseMock.content }),
+          a: fetchCitiesSuccess({ citiesResponse: citiesResponseMock }),
         });
         m.expect(effects.fetchCities$).toBeObservable(expected);
       })

@@ -9,7 +9,7 @@ describe('Fetch cities', () => {
 
   it('should return fetch success action', () => {
     expect(
-      fromFetchCities.fetchCitiesSuccess({ cities: citiesResponseMock.content })
+      fromFetchCities.fetchCitiesSuccess({ citiesResponse: citiesResponseMock })
         .type
     ).toBe('[Cities] Fetch success');
   });

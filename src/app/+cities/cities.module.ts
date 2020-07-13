@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EffectsModule } from '@ngrx/effects';
-import { MatTableModule } from '@angular/material';
+import { MatTableModule, MatPaginatorModule } from '@angular/material';
 
-import { CitiesContainerComponent, CitiesTableComponent } from './components';
+import {
+  CitiesContainerComponent,
+  CitiesPaginatorComponent,
+  CitiesTableComponent,
+} from './components';
 import { CitiesRoutingModule } from './cities-routing.module';
 import { CitiesEffects } from './state/effects';
 
@@ -12,8 +16,13 @@ import { CitiesEffects } from './state/effects';
     CommonModule,
     CitiesRoutingModule,
     EffectsModule.forFeature([CitiesEffects]),
-    MatTableModule
+    MatPaginatorModule,
+    MatTableModule,
   ],
-  declarations: [CitiesContainerComponent, CitiesTableComponent],
+  declarations: [
+    CitiesContainerComponent,
+    CitiesPaginatorComponent,
+    CitiesTableComponent,
+  ],
 })
 export class CitiesModule {}

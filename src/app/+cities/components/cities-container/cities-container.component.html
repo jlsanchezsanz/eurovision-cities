@@ -1,3 +1,8 @@
 <h1>Cities</h1>
 
 <app-cities-table [cities]="cities$ | async"></app-cities-table>
+<app-cities-paginator
+  [pageSizeOptions]="pageSizeOptions"
+  [size]="pageSize$ | async"
+  [totalElements]="totalElements$ | async"
+></app-cities-paginator>

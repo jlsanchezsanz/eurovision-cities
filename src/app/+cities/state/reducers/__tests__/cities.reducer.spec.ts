@@ -26,13 +26,26 @@ describe('Cities Reducer', () => {
     });
   });
 
-  it('should update loading and cities on fetch success', () => {
-    const cities = citiesResponseMock.content;
-    const result = citiesReducer(initialState, fetchCitiesSuccess({ cities }));
+  it('should update loading, cities and pagination on fetch success', () => {
+    const {
+      content,
+      pageable: { pageNumber },
+      size,
+      totalElements,
+    } = citiesResponseMock;
+    const result = citiesReducer(
+      initialState,
+      fetchCitiesSuccess({ citiesResponse: citiesResponseMock })
+    );
     expect(result).toEqual({
       ...initialState,
       loading: false,
-      cities,
+      pagination: {
+        pageNumber,
+        size,
+        totalElements,
+      },
+      cities: content,
     });
   });
 

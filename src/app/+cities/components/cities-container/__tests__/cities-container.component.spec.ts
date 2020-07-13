@@ -6,8 +6,13 @@ import { MockComponent } from 'ng-mocks';
 import { CitiesContainerComponent } from '../cities-container.component';
 import { CitiesTableComponent } from '../../cities-table';
 import { fetchCities } from '../../../state/actions';
-import { getCities } from '../../../state/selectors';
+import {
+  getCities,
+  getPageSize,
+  getTotalElements
+} from '../../../state/selectors';
 import { citiesResponseMock } from '../../../../mocks';
+import { CitiesPaginatorComponent } from '../../cities-paginator';
 
 describe('CitiesContainerComponent', () => {
   let component: CitiesContainerComponent;
@@ -19,6 +24,7 @@ describe('CitiesContainerComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         CitiesContainerComponent,
+        MockComponent(CitiesPaginatorComponent),
         MockComponent(CitiesTableComponent),
       ],
       providers: [
@@ -26,6 +32,8 @@ describe('CitiesContainerComponent', () => {
           initialState,
           selectors: [
             { selector: getCities, value: citiesResponseMock.content },
+            { selector: getPageSize, value: 10 },
+            { selector: getTotalElements, value: 100 },
           ],
         }),
       ],

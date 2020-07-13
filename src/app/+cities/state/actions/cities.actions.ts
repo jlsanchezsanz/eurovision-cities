@@ -1,12 +1,12 @@
 import { createAction, props } from '@ngrx/store';
 
-import { City } from '../../../models';
+import { CitiesResponse } from '../../../models';
 
 export const fetchCities = createAction('[Cities] Fetch');
 
 export const fetchCitiesSuccess = createAction(
   '[Cities] Fetch success',
-  props<{ cities: City[] }>()
+  props<{ citiesResponse: CitiesResponse }>()
 );
 
 export const fetchCitiesError = createAction(

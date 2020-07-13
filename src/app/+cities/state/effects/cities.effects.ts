@@ -15,7 +15,7 @@ export class CitiesEffects {
       switchMap(() =>
         this.citiesService.getCities(1, 10).pipe(
           map((citiesResponse: CitiesResponse) =>
-            fetchCitiesSuccess({ cities: citiesResponse.content })
+            fetchCitiesSuccess({ citiesResponse })
           ),
           catchError((error) => of(fetchCitiesError(error)))
         )
