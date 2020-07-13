@@ -12,8 +12,8 @@ export class CitiesEffects {
   public fetchCities$ = createEffect(() =>
     this.actions$.pipe(
       ofType(fetchCities),
-      switchMap(() =>
-        this.citiesService.getCities(1, 10).pipe(
+      switchMap(({ page, size }) =>
+        this.citiesService.getCities(page, size).pipe(
           map((citiesResponse: CitiesResponse) =>
             fetchCitiesSuccess({ citiesResponse })
           ),

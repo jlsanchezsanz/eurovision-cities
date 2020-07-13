@@ -30,12 +30,18 @@ describe('CitiesEffects', () => {
       'should return fetch success action with cities on success',
       marbles((m) => {
         citiesServiceMock.getCities.mockReturnValueOnce(of(citiesResponseMock));
-        actions$.setSource(m.cold('a', { a: fetchCities() }));
+        actions$.setSource(
+          m.cold('a', { a: fetchCities({ page: 1, size: 10 }) })
+        );
 
         const expected = m.cold('a', {
           a: fetchCitiesSuccess({ citiesResponse: citiesResponseMock }),
         });
         m.expect(effects.fetchCities$).toBeObservable(expected);
+        expect(citiesServiceMock.getCities).not.toHaveBeenCalled();
+        m.flush();
+        expect(citiesServiceMock.getCities).toHaveBeenCalledTimes(1);
+        expect(citiesServiceMock.getCities).toHaveBeenCalledWith(1, 10);
       })
     );
 
@@ -44,7 +50,9 @@ describe('CitiesEffects', () => {
       marbles((m) => {
         const error = { message: '' };
         citiesServiceMock.getCities.mockReturnValueOnce(throwError({ error }));
-        actions$.setSource(m.cold('a', { a: fetchCities() }));
+        actions$.setSource(
+          m.cold('a', { a: fetchCities({ page: 1, size: 10 }) })
+        );
 
         const expected = m.cold('a', {
           a: fetchCitiesError({ error }),

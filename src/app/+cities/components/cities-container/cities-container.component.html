@@ -5,4 +5,5 @@
   [pageSizeOptions]="pageSizeOptions"
   [size]="pageSize$ | async"
   [totalElements]="totalElements$ | async"
+  (pageChange)="onPageChange($event)"
 ></app-cities-paginator>

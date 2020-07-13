@@ -4,7 +4,9 @@ import { citiesResponseMock } from '../../../../mocks';
 
 describe('Fetch cities', () => {
   it('should return fetch action', () => {
-    expect(fromFetchCities.fetchCities().type).toBe('[Cities] Fetch');
+    expect(fromFetchCities.fetchCities({ page: 1, size: 10 }).type).toBe(
+      '[Cities] Fetch'
+    );
   });
 
   it('should return fetch success action', () => {

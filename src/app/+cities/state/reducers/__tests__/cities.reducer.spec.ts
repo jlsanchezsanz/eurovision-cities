@@ -5,6 +5,7 @@ import {
   fetchCitiesError,
 } from '../../actions';
 import { citiesResponseMock } from '../../../../mocks';
+import { state } from '@angular/animations';
 
 describe('Cities Reducer', () => {
   describe('an unknown action', () => {
@@ -27,7 +28,10 @@ describe('Cities Reducer', () => {
   });
 
   it('should update loading, cities and pagination on fetch success', () => {
-    const { content } = citiesResponseMock;
+    const {
+      content,
+      pageable: { pageNumber },
+    } = citiesResponseMock;
     const result = citiesReducer(
       initialState,
       fetchCitiesSuccess({ citiesResponse: citiesResponseMock })
@@ -35,7 +39,10 @@ describe('Cities Reducer', () => {
     expect(result).toEqual({
       ...initialState,
       loading: false,
-      cities: content,
+      cities: {
+        ...initialState.cities,
+        [pageNumber]: content,
+      },
     });
   });
 

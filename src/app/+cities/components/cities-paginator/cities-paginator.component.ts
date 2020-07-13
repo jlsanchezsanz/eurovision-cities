@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { PageEvent } from '@angular/material';
 
 @Component({
   selector: 'app-cities-paginator',
@@ -10,4 +11,9 @@ export class CitiesPaginatorComponent {
   @Input() public pageSizeOptions: number[];
   @Input() public size: number;
   @Input() public totalElements: number;
+  @Output() public pageChange: EventEmitter<PageEvent> = new EventEmitter();
+
+  public onPageChange(pageEvent: PageEvent): void {
+    this.pageChange.emit(pageEvent);
+  }
 }

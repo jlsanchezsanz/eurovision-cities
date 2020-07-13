@@ -9,7 +9,7 @@ import { fetchCities } from '../../../state/actions';
 import {
   getCities,
   getPageSize,
-  getTotalElements
+  getTotalElements,
 } from '../../../state/selectors';
 import { citiesResponseMock } from '../../../../mocks';
 import { CitiesPaginatorComponent } from '../../cities-paginator';
@@ -55,6 +55,17 @@ describe('CitiesContainerComponent', () => {
     const dispatchSpy = jest.spyOn(store, 'dispatch');
     fixture.detectChanges();
     expect(dispatchSpy).toBeCalledTimes(1);
-    expect(dispatchSpy).toBeCalledWith(fetchCities());
+    expect(dispatchSpy).toBeCalledWith(fetchCities({ page: 0, size: 10 }));
+  });
+
+  it('should fetch cities on page change', () => {
+    const dispatchSpy = jest.spyOn(store, 'dispatch');
+    component.onPageChange({
+      pageIndex: 2,
+      pageSize: 20,
+      length: 300,
+    });
+    expect(dispatchSpy).toBeCalledTimes(1);
+    expect(dispatchSpy).toBeCalledWith(fetchCities({ page: 2, size: 20 }));
   });
 });

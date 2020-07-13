@@ -28,4 +28,17 @@ describe('CitiesPaginatorComponent', () => {
   it('should match snapshot', () => {
     expect(fixture).toMatchSnapshot();
   });
+
+  it('should emit page info on page change', () => {
+    const pageChangeSpy = jest.spyOn(component.pageChange, 'emit');
+    const pageEvent = {
+      pageIndex: 2,
+      pageSize: 20,
+      length: 300,
+    };
+    expect(pageChangeSpy).not.toHaveBeenCalled();
+    component.onPageChange(pageEvent);
+    expect(pageChangeSpy).toHaveBeenCalledTimes(1);
+    expect(pageChangeSpy).toHaveBeenCalledWith(pageEvent);
+  });
 });

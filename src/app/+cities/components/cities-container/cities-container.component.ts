@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { PageEvent } from '@angular/material';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -28,10 +29,15 @@ export class CitiesContainerComponent implements OnInit {
   constructor(private store: Store<State>) {}
 
   public ngOnInit(): void {
-    this.store.dispatch(fetchCities());
+    this.store.dispatch(fetchCities({ page: 0, size: 10 }));
     this.cities$ = this.store.pipe(select(getCities));
     this.pageNumber$ = this.store.pipe(select(getPageNumber));
     this.pageSize$ = this.store.pipe(select(getPageSize));
     this.totalElements$ = this.store.pipe(select(getTotalElements));
+  }
+
+  public onPageChange(pageEvent: PageEvent): void {
+    const { pageIndex: page, pageSize: size } = pageEvent;
+    this.store.dispatch(fetchCities({ page, size }));
   }
 }
