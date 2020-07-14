@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { reducers, metaReducers } from './state/reducers';
 import { environment } from '../environments/environment';
+import { MenuModule } from './components';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     EffectsModule.forRoot(),
     HttpClientModule,
+    MenuModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

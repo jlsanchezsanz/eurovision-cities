@@ -1,10 +1,17 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { PageEvent } from '@angular/material';
 
 @Component({
   selector: 'app-cities-paginator',
   templateUrl: './cities-paginator.component.html',
   styleUrls: ['./cities-paginator.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CitiesPaginatorComponent {
   @Input() public pageNumber: number;

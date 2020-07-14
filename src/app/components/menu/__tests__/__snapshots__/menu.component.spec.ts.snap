@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuComponent should match snapshot 1`] = `
+<app-menu>
+  <button
+    aria-haspopup="true"
+    class="mat-menu-trigger mat-button mat-button-base"
+    mat-button=""
+  >
+    <span
+      class="mat-button-wrapper"
+    >
+      Menu
+    </span>
+    <div
+      class="mat-button-ripple mat-ripple"
+      matripple=""
+    />
+    <div
+      class="mat-button-focus-overlay"
+    />
+  </button><mat-menu>
+    
+  </mat-menu>
+</app-menu>
+`;
