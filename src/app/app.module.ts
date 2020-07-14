@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { reducers, metaReducers } from './state/reducers';
 import { environment } from '../environments/environment';
-import { MenuModule } from './components';
+import { HeaderModule } from './components';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +19,7 @@ import { MenuModule } from './components';
     AppRoutingModule,
     EffectsModule.forRoot(),
     HttpClientModule,
-    MenuModule,
+    HeaderModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

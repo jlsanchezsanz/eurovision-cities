@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent should match snapshot 1`] = `
+<app-header>
+  <section>
+    <app-menu />
+  </section><section
+    class="header__logo"
+  >
+    <img
+      alt="Eurovision Services"
+      class="logo__img"
+      src="../../assets/logo.png"
+    />
+  </section>
+</app-header>
+`;

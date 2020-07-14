@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should match snapshot 1`] = `
+<app-root>
+  <header>
+    <app-header />
+  </header><main
+    class="main"
+  >
+    <section>
+      <router-outlet />
+    </section>
+  </main>
+</app-root>
+`;

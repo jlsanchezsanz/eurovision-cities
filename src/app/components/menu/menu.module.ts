@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatMenuModule, MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatMenuModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
 import { MenuComponent } from './menu.component';

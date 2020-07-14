@@ -2,17 +2,10 @@
 
 exports[`HomeComponent should create 1`] = `
 <app-home>
-  <div
-    class="home"
+  <h1
+    class="home__title"
   >
-    <img
-      alt="Eurovision Services"
-      class="home__logo"
-      src="../../assets/logo.png"
-    />
-    <h1>
-      Welcome to Eurovision Services Sandbox!
-    </h1>
-  </div>
+    Welcome to Eurovision Services Sandbox!
+  </h1>
 </app-home>
 `;

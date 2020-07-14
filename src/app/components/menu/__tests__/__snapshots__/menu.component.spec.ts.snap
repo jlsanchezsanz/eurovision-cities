@@ -19,8 +19,10 @@ exports[`MenuComponent should match snapshot 1`] = `
     <div
       class="mat-button-focus-overlay"
     />
-  </button><mat-menu>
-    
-  </mat-menu>
+  </button><nav>
+    <mat-menu>
+      
+    </mat-menu>
+  </nav>
 </app-menu>
 `;
