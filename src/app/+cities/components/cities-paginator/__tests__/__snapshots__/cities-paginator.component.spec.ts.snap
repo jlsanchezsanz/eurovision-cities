@@ -2,8 +2,8 @@
 
 exports[`CitiesPaginatorComponent should match snapshot 1`] = `
 <app-cities-paginator
+  page={[Function Number]}
   pageChange={[Function EventEmitter]}
-  pageNumber={[Function Number]}
   pageSizeOptions={[Function Array]}
   size={[Function Number]}
   totalElements={[Function Number]}

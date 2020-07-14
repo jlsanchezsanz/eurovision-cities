@@ -6,9 +6,9 @@ export const getPaginationState = createFeatureSelector<PaginationState>(
   paginationFeatureKey
 );
 
-export const getPageNumber = createSelector(
+export const getPage = createSelector(
   getPaginationState,
-  (pagination) => pagination && pagination.pageNumber
+  (pagination) => pagination && pagination.page
 );
 
 export const getPageSize = createSelector(

@@ -2,7 +2,7 @@ import {
   paginationReducer,
   paginationInitialState,
 } from '../pagination.reducer';
-import { updatePagination } from '../../actions';
+import { updatePagination, updatePage } from '../../actions';
 import { citiesResponseMock } from '../../../../mocks';
 
 describe('Pagination Reducer', () => {
@@ -16,21 +16,27 @@ describe('Pagination Reducer', () => {
     });
   });
 
-  it('should update pagination', () => {
-    const {
-      pageable: { pageNumber },
-      size,
-      totalElements,
-    } = citiesResponseMock;
+  it('should update totalElements value', () => {
+    const { totalElements } = citiesResponseMock;
     const result = paginationReducer(
       paginationInitialState,
       updatePagination({ paginationInfo: citiesResponseMock })
     );
     expect(result).toEqual({
       ...paginationInitialState,
-      pageNumber,
-      size,
       totalElements,
+    });
+  });
+
+  it('should update page value', () => {
+    const page = 3;
+    const result = paginationReducer(
+      paginationInitialState,
+      updatePage({ page })
+    );
+    expect(result).toEqual({
+      ...paginationInitialState,
+      page,
     });
   });
 });

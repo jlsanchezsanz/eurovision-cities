@@ -32,7 +32,7 @@ describe('Cities Reducer', () => {
   it('should update loading, cities and pagination on fetch success', () => {
     const {
       content,
-      pageable: { pageNumber },
+      number: page
     } = citiesResponseMock;
     const result = citiesReducer(
       initialState,
@@ -43,7 +43,7 @@ describe('Cities Reducer', () => {
       loading: false,
       cities: {
         ...initialState.cities,
-        [pageNumber]: content,
+        [page]: content,
       },
     });
   });

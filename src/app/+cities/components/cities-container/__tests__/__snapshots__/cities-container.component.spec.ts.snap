@@ -3,7 +3,7 @@
 exports[`CitiesContainerComponent should match snapshot 1`] = `
 <app-cities-container
   cities$={[Function Store]}
-  pageNumber$={[Function Store]}
+  page$={[Function Store]}
   pageSize$={[Function Store]}
   pageSizeOptions={[Function Array]}
   store={[Function MockStore]}

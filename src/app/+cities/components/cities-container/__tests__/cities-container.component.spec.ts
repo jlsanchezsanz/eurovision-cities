@@ -10,6 +10,7 @@ import {
   getCities,
   getPageSize,
   getTotalElements,
+  getPage,
 } from '../../../state/selectors';
 import { citiesResponseMock } from '../../../../mocks';
 import { CitiesPaginatorComponent } from '../../cities-paginator';
@@ -32,6 +33,7 @@ describe('CitiesContainerComponent', () => {
           initialState,
           selectors: [
             { selector: getCities, value: citiesResponseMock.content },
+            { selector: getPage, value: 0 },
             { selector: getPageSize, value: 10 },
             { selector: getTotalElements, value: 100 },
           ],

@@ -14,7 +14,7 @@ import { PageEvent } from '@angular/material';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CitiesPaginatorComponent {
-  @Input() public pageNumber: number;
+  @Input() public page: number;
   @Input() public pageSizeOptions: number[];
   @Input() public size: number;
   @Input() public totalElements: number;

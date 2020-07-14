@@ -49,24 +49,7 @@ Object {
   "last": false,
   "number": 1,
   "numberOfElements": 10,
-  "pageable": Object {
-    "offset": 10,
-    "pageNumber": 1,
-    "pageSize": 10,
-    "paged": true,
-    "sort": Object {
-      "empty": true,
-      "sorted": false,
-      "unsorted": true,
-    },
-    "unpaged": false,
-  },
   "size": 10,
-  "sort": Object {
-    "empty": true,
-    "sorted": false,
-    "unsorted": true,
-  },
   "totalElements": 332,
   "totalPages": 34,
 }

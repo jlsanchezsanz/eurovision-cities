@@ -26,13 +26,13 @@ const _citiesReducer = createReducer(
       {
         citiesResponse: {
           content,
-          number: pageNumber,
+          number: page,
         },
       }
     ) => ({
       ...state,
       loading: false,
-      cities: { ...state.cities, [pageNumber]: content },
+      cities: { ...state.cities, [page]: content },
     })
   ),
   on(fetchCitiesError, (state, { error }) => ({

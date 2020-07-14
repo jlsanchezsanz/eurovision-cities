@@ -1,20 +1,20 @@
 import { citiesResponseMock } from '../../../../mocks';
 import {
-  getPageNumber,
+  getPage,
   getPageSize,
   getTotalElements,
 } from '../pagination.selectors';
 
 describe('Pagination Selectors', () => {
   const {
-    pageable: { pageNumber },
+    number: page,
     size,
     totalElements,
   } = citiesResponseMock;
 
-  describe('getPageNumber', () => {
+  describe('getPage', () => {
     it('should select page number value', () => {
-      expect(getPageNumber.projector({ pageNumber })).toBe(pageNumber);
+      expect(getPage.projector({ page })).toBe(page);
     });
   });
 
