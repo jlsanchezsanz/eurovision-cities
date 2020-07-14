@@ -5,7 +5,6 @@ import {
   fetchCitiesError,
 } from '../../actions';
 import { citiesResponseMock } from '../../../../mocks';
-import { state } from '@angular/animations';
 
 describe('Cities Reducer', () => {
   describe('an unknown action', () => {
@@ -19,7 +18,10 @@ describe('Cities Reducer', () => {
   });
 
   it('should update loading and error on fetch', () => {
-    const result = citiesReducer(initialState, fetchCities());
+    const result = citiesReducer(
+      initialState,
+      fetchCities({ page: 1, size: 25 })
+    );
     expect(result).toEqual({
       ...initialState,
       loading: true,

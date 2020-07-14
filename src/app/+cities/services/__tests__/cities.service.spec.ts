@@ -1,5 +1,5 @@
 import { CitiesService } from '../cities.service';
-import { citiesResponseMock } from '../../mocks';
+import { citiesResponseMock } from '../../../mocks';
 
 describe('CitiesService', () => {
   let citiesService: CitiesService;
