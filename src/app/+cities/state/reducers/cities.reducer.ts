@@ -26,7 +26,7 @@ const _citiesReducer = createReducer(
       {
         citiesResponse: {
           content,
-          pageable: { pageNumber },
+          number: pageNumber,
         },
       }
     ) => ({
