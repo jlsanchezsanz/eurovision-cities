@@ -9,8 +9,14 @@ exports[`CitiesContainerComponent should match snapshot 1`] = `
   store={[Function MockStore]}
   totalElements$={[Function Store]}
 >
-  <h1>
-    Cities
-  </h1><app-cities-table /><app-cities-paginator />
+  <header>
+    <h1>
+      Cities
+    </h1>
+  </header><section>
+    <app-cities-table />
+  </section><section>
+    <app-cities-paginator />
+  </section>
 </app-cities-container>
 `;
