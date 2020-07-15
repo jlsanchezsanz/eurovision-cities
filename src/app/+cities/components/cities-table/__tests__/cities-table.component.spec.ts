@@ -1,17 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatTableModule } from '@angular/material';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatTableModule, MatSortModule, MatPaginator } from "@angular/material";
 
-import { CitiesTableComponent } from '../cities-table.component';
-import { citiesResponseMock } from '../../../../mocks';
+import { CitiesTableComponent } from "../cities-table.component";
+import { citiesResponseMock } from "../../../../mocks";
+import { MockComponent, MockModule } from "ng-mocks";
 
-describe('CitiesTableComponent', () => {
+describe("CitiesTableComponent", () => {
   let component: CitiesTableComponent;
   let fixture: ComponentFixture<CitiesTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatTableModule],
-      declarations: [CitiesTableComponent],
+      imports: [MatTableModule, MockModule(MatSortModule)],
+      declarations: [CitiesTableComponent, MockComponent(MatPaginator)],
     }).compileComponents();
   }));
 
@@ -22,7 +23,7 @@ describe('CitiesTableComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should match snapshot', () => {
+  it("should match snapshot", () => {
     expect(fixture).toMatchSnapshot();
   });
 });

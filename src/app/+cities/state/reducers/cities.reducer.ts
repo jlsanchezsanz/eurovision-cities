@@ -6,7 +6,7 @@ import { fetchCities, fetchCitiesSuccess, fetchCitiesError } from '../actions';
 export const citiesFeatureKey = 'cities';
 
 export interface CitiesState {
-  cities: { [key: number]: City[] };
+  cities: City[];
   loading: boolean;
   error?: any;
 }
@@ -19,22 +19,11 @@ export const initialState: CitiesState = {
 const _citiesReducer = createReducer(
   initialState,
   on(fetchCities, (state) => ({ ...state, loading: true, error: undefined })),
-  on(
-    fetchCitiesSuccess,
-    (
-      state,
-      {
-        citiesResponse: {
-          content,
-          number: page,
-        },
-      }
-    ) => ({
-      ...state,
-      loading: false,
-      cities: { ...state.cities, [page]: content },
-    })
-  ),
+  on(fetchCitiesSuccess, (state, { citiesResponse: { content } }) => ({
+    ...state,
+    loading: false,
+    cities: [...state.cities, ...content],
+  })),
   on(fetchCitiesError, (state, { error }) => ({
     ...state,
     loading: false,

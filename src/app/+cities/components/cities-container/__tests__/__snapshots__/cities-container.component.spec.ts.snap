@@ -3,11 +3,8 @@
 exports[`CitiesContainerComponent should match snapshot 1`] = `
 <app-cities-container
   cities$={[Function Store]}
-  page$={[Function Store]}
-  pageSize$={[Function Store]}
   pageSizeOptions={[Function Array]}
   store={[Function MockStore]}
-  totalElements$={[Function Store]}
 >
   <header>
     <h1>
@@ -15,8 +12,6 @@ exports[`CitiesContainerComponent should match snapshot 1`] = `
     </h1>
   </header><section>
     <app-cities-table />
-  </section><section>
-    <app-cities-paginator />
   </section>
 </app-cities-container>
 `;

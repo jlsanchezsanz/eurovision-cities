@@ -2,262 +2,278 @@
 
 exports[`CitiesTableComponent should match snapshot 1`] = `
 <app-cities-table
-  cities={[Function Array]}
+  dataSource={[Function MatTableDataSource]}
   displayedColumns={[Function Array]}
+  paginator={[Function MatPaginator]}
+  sort={[Function MatSort]}
 >
-  <table
-    class="mat-elevation-z8 mat-table"
-    mat-table=""
-    role="grid"
+  <div
+    class="mat-elevation-z8"
   >
-    <thead
-      role="rowgroup"
-    >
-      
-      <tr
-        class="mat-header-row"
-        mat-header-row=""
-        role="row"
+    <section>
+      <table
+        class="mat-table"
+        mat-table=""
+        matsort=""
+        role="grid"
       >
-        
-        <th
-          class="mat-header-cell cdk-column-id mat-column-id"
-          mat-header-cell=""
-          role="columnheader"
+        <thead
+          role="rowgroup"
         >
-           Id 
-        </th>
-        <th
-          class="mat-header-cell cdk-column-name mat-column-name"
-          mat-header-cell=""
-          role="columnheader"
+          
+          <tr
+            class="mat-header-row"
+            mat-header-row=""
+            role="row"
+          >
+            
+            <th
+              class="mat-header-cell cdk-column-id mat-column-id"
+              mat-header-cell=""
+              mat-sort-header=""
+              role="columnheader"
+            >
+              Id
+            </th>
+            <th
+              class="mat-header-cell cdk-column-name mat-column-name"
+              mat-header-cell=""
+              mat-sort-header=""
+              role="columnheader"
+            >
+              Name
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
         >
-           Name 
-        </th>
-      </tr>
-    </thead>
-    <tbody
-      role="rowgroup"
-    >
-      
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
+          
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              317
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Ahvaz
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              87
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Al-Jizah
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              147
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Al-Khartum Bahri
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              227
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Al-Madinah
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              103
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Aleppo
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              47
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Alexandria
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              176
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Algiers
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              307
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Allahabad
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              302
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Almaty
+            </td>
+          </tr>
+          <tr
+            class="mat-row"
+            mat-row=""
+            role="row"
+          >
+            
+            <td
+              class="mat-cell cdk-column-id mat-column-id"
+              mat-cell=""
+              role="gridcell"
+            >
+              260
+            </td>
+            <td
+              class="mat-cell cdk-column-name mat-column-name"
+              mat-cell=""
+              role="gridcell"
+            >
+              Amman
+            </td>
+          </tr>
+        </tbody>
+        <tfoot
+          class="mat-table-sticky"
+          role="rowgroup"
+          style="display: none; bottom: 0px; position: sticky; z-index: 10;"
         >
-           317 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Ahvaz 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           87 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Al-Jizah 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           147 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Al-Khartum Bahri 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           227 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Al-Madinah 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           103 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Aleppo 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           47 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Alexandria 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           176 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Algiers 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           307 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Allahabad 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           302 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Almaty 
-        </td>
-      </tr>
-      <tr
-        class="mat-row"
-        mat-row=""
-        role="row"
-      >
-        
-        <td
-          class="mat-cell cdk-column-id mat-column-id"
-          mat-cell=""
-          role="gridcell"
-        >
-           260 
-        </td>
-        <td
-          class="mat-cell cdk-column-name mat-column-name"
-          mat-cell=""
-          role="gridcell"
-        >
-           Amman 
-        </td>
-      </tr>
-    </tbody>
-    <tfoot
-      class="mat-table-sticky"
-      role="rowgroup"
-      style="display: none; bottom: 0px; position: sticky; z-index: 10;"
-    >
-      
-    </tfoot>
-  </table>
+          
+        </tfoot>
+      </table>
+    </section>
+    <section>
+      <mat-paginator
+        showfirstlastbuttons=""
+      />
+    </section>
+  </div>
 </app-cities-table>
 `;

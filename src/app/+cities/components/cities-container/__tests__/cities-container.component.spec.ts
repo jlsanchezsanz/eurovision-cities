@@ -6,14 +6,8 @@ import { MockComponent } from 'ng-mocks';
 import { CitiesContainerComponent } from '../cities-container.component';
 import { CitiesTableComponent } from '../../cities-table';
 import { fetchCities } from '../../../state/actions';
-import {
-  getCities,
-  getPageSize,
-  getTotalElements,
-  getPage,
-} from '../../../state/selectors';
+import { getCities } from '../../../state/selectors';
 import { citiesResponseMock } from '../../../../mocks';
-import { CitiesPaginatorComponent } from '../../cities-paginator';
 
 describe('CitiesContainerComponent', () => {
   let component: CitiesContainerComponent;
@@ -25,7 +19,6 @@ describe('CitiesContainerComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         CitiesContainerComponent,
-        MockComponent(CitiesPaginatorComponent),
         MockComponent(CitiesTableComponent),
       ],
       providers: [
@@ -33,9 +26,6 @@ describe('CitiesContainerComponent', () => {
           initialState,
           selectors: [
             { selector: getCities, value: citiesResponseMock.content },
-            { selector: getPage, value: 0 },
-            { selector: getPageSize, value: 10 },
-            { selector: getTotalElements, value: 100 },
           ],
         }),
       ],
@@ -58,16 +48,5 @@ describe('CitiesContainerComponent', () => {
     fixture.detectChanges();
     expect(dispatchSpy).toBeCalledTimes(1);
     expect(dispatchSpy).toBeCalledWith(fetchCities({ page: 0, size: 10 }));
-  });
-
-  it('should fetch cities on page change', () => {
-    const dispatchSpy = jest.spyOn(store, 'dispatch');
-    component.onPageChange({
-      pageIndex: 2,
-      pageSize: 20,
-      length: 300,
-    });
-    expect(dispatchSpy).toBeCalledTimes(1);
-    expect(dispatchSpy).toBeCalledWith(fetchCities({ page: 2, size: 20 }));
   });
 });
