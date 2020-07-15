@@ -10,7 +10,6 @@ import { getCities } from '../../state/selectors';
 @Component({
   selector: 'app-cities-container',
   templateUrl: './cities-container.component.html',
-  styleUrls: ['./cities-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CitiesContainerComponent implements OnInit {

@@ -8,7 +8,7 @@ exports[`CitiesTableComponent should match snapshot 1`] = `
   sort={[Function MatSort]}
 >
   <div
-    class="mat-elevation-z8"
+    class="wrapper mat-elevation-z8"
   >
     <section>
       <mat-form-field>
