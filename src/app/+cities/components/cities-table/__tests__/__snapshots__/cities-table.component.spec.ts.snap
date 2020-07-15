@@ -11,6 +11,14 @@ exports[`CitiesTableComponent should match snapshot 1`] = `
     class="mat-elevation-z8"
   >
     <section>
+      <mat-form-field>
+        <input
+          matinput=""
+          placeholder="Filter"
+        />
+      </mat-form-field>
+    </section>
+    <section>
       <table
         class="mat-table"
         mat-table=""
