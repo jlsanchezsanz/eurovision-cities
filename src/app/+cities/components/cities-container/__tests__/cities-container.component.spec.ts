@@ -44,9 +44,16 @@ describe('CitiesContainerComponent', () => {
   });
 
   it('should fetch cities', () => {
+    getCities.setResult([]);
     const dispatchSpy = jest.spyOn(store, 'dispatch');
     fixture.detectChanges();
     expect(dispatchSpy).toBeCalledTimes(1);
     expect(dispatchSpy).toBeCalledWith(fetchCities({ page: 0, size: 10 }));
+  });
+
+  it('should not fetch cities if already in the store', () => {
+    const dispatchSpy = jest.spyOn(store, 'dispatch');
+    fixture.detectChanges();
+    expect(dispatchSpy).not.toBeCalled();
   });
 });

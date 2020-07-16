@@ -11,7 +11,12 @@ exports[`CitiesContainerComponent should match snapshot 1`] = `
       Cities
     </h1>
   </header><section>
+    
+    
+    
+    
     <app-cities-table />
+    
   </section>
 </app-cities-container>
 `;

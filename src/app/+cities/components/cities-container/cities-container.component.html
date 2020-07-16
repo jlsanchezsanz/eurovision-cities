@@ -3,8 +3,12 @@
 </header>
 
 <section>
-  <app-cities-table
-    [cities]="cities$ | async"
-    [pageSizeOptions]="pageSizeOptions"
-  ></app-cities-table>
+  <ng-container *ngIf="cities$ | async as cities">
+    <ng-container *ngIf="cities.length > 0">
+      <app-cities-table
+        [cities]="cities"
+        [pageSizeOptions]="pageSizeOptions"
+      ></app-cities-table>
+    </ng-container>
+  </ng-container>
 </section>

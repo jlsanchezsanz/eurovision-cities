@@ -71,7 +71,7 @@ describe('CitiesEffects', () => {
             })
           );
 
-          const expected = m.cold('a', {
+          const expected = m.cold('1000ms a', {
             a: fetchCities({ page: 2, size: 10 }),
           });
           m.expect(effects.fetchCitiesNextPage$).toBeObservable(expected);

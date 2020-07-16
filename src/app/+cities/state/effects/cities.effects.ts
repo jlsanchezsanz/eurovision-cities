@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
-import { map, catchError, switchMap, filter } from 'rxjs/operators';
+import { map, catchError, switchMap, filter, debounceTime } from 'rxjs/operators';
 
 import { fetchCities, fetchCitiesSuccess, fetchCitiesError } from '../actions';
 import { CitiesService } from '../../services';
@@ -26,6 +26,7 @@ export class CitiesEffects {
   public fetchCitiesNextPage$ = createEffect(() =>
     this.actions$.pipe(
       ofType(fetchCitiesSuccess),
+      debounceTime(1000),
       map(({ citiesResponse: { last, number: page, size } }) => ({
         last,
         page,
